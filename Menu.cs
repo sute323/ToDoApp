@@ -4,11 +4,11 @@ using System.Text;
 
 namespace TodoList
 {
-    public class MenuManager
+    public class Menu
     {
         private List<string> _menu = new List<string>();
 
-        public MenuManager()
+        public Menu()
         {
             _menu.Add("*************************");
             _menu.Add("1.タスクを追加する");

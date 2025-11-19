@@ -9,7 +9,7 @@ namespace TodoList
         {
 
             //メニュー取得
-            MenuManager menu = new MenuManager();
+            Menu menu = new Menu();
             //タスククラス取得
             TaskManager taskItem = new TaskManager();
 
