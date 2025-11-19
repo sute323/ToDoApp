@@ -1,6 +1,5 @@
 ﻿
 using System.Diagnostics.Contracts;
-//GitHub
 namespace TodoList
 {
     class Program
