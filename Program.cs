@@ -36,6 +36,11 @@ namespace TodoList
                     }
                     else if (index == 2) //終了
                     {
+                        //タスク削除処理
+                        taskItem.DeleteTask();
+                    }
+                    else if(index == 3)
+                    {
                         break;
                     }
                     else

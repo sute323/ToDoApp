@@ -13,7 +13,8 @@ namespace TodoList
             _menu.Add("*************************");
             _menu.Add("1.タスクを追加する");
             _menu.Add("2.タスクの一覧を表示する");
-            _menu.Add("3.終了する");
+            _menu.Add("3.タスクを削除する");
+            _menu.Add("4.終了する");
         }
 
         public void Display()

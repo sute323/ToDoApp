@@ -24,7 +24,35 @@ namespace TodoList
         {
             for (int i = 0; i < task.Count; i++)
             {
-                Console.WriteLine(task[i].Title);
+                Console.WriteLine($"{i + 1}.{task[i].Title}");
+            }
+
+        }
+
+        //タスク削除
+        public void DeleteTask()
+        {
+            Console.WriteLine("削除するタスク番号を入力してください");
+            string inputTaskNumber = Console.ReadLine();
+            if (int.TryParse(inputTaskNumber, out int index))
+            {
+                //タスクを数える
+                int taskCount = task.Count;
+
+                switch (index)
+                {
+                    case int m when m <= taskCount:
+                        task.RemoveAt(m - 1);
+                        break;
+
+                    case int n when n > taskCount:
+                        Console.WriteLine("入力数値がエラーです");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("数値を入力してください");
             }
 
         }
