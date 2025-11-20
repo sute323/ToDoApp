@@ -29,10 +29,14 @@ namespace TodoList
 
         }
 
-        //タスク削除
+        /// <summary>
+        /// タスク削除
+        /// </summary>
         public void DeleteTask()
         {
             Console.WriteLine("削除するタスク番号を入力してください");
+            ViewTask();
+
             string inputTaskNumber = Console.ReadLine();
             if (int.TryParse(inputTaskNumber, out int index))
             {
@@ -41,11 +45,11 @@ namespace TodoList
 
                 switch (index)
                 {
-                    case int m when m <= taskCount:
+                    case int m when m <= taskCount && m > 0:
                         task.RemoveAt(m - 1);
                         break;
 
-                    case int n when n > taskCount:
+                    case int n when n > taskCount || n == 0:
                         Console.WriteLine("入力数値がエラーです");
                         break;
                 }

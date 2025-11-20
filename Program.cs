@@ -20,33 +20,33 @@ namespace TodoList
 
                 //入力の受付
                 string inputNumber = Console.ReadLine();
-
+                
                 if (int.TryParse(inputNumber, out int index))
                 {
-                    index = index - 1;
-                    if (index == 0) 
+                    switch (index)
                     {
-                        //タスク追加処理
-                        taskItem.AddTask();
+                        //プログラム終了
+                        case 0:
+                            break;
+                        case 1:
+                            taskItem.AddTask();
+                            break;
+                        case 2:
+                            taskItem.ViewTask();
+                            break;
+                        case 3:
+                            taskItem.DeleteTask();
+                            break;
+                        default:
+                            Console.WriteLine("入力数値がエラーです");
+                            break;
                     }
-                    else if (index == 1) //タスク一覧
-                    {
-                        //タスク一覧の表示処理
-                        taskItem.ViewTask();
-                    }
-                    else if (index == 2) //終了
-                    {
-                        //タスク削除処理
-                        taskItem.DeleteTask();
-                    }
-                    else if(index == 3)
+
+                    if (index == 0)
                     {
                         break;
                     }
-                    else
-                    {
-                        Console.WriteLine("入力数値がエラーです");
-                    }
+
                 }
                 else
                 {
