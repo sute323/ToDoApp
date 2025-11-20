@@ -27,7 +27,8 @@ namespace TodoList
                     {
                         //プログラム終了
                         case 0:
-                            break;
+                            Console.WriteLine("プログラムを終了します");
+                            return;
                         case 1:
                             taskItem.AddTask();
                             break;
@@ -41,12 +42,6 @@ namespace TodoList
                             Console.WriteLine("入力数値がエラーです");
                             break;
                     }
-
-                    if (index == 0)
-                    {
-                        break;
-                    }
-
                 }
                 else
                 {
